@@ -68,7 +68,7 @@ def submit_basic():
     if request.method == 'GET':
         return render_template('submit-basic.html')
     else:
-        try:
+        try: # defined in submit-basic.html
             return render_template('submit-basic.html', thanks = True)
         except:
             return render_template('submit-basic.html', error=True)
@@ -76,6 +76,7 @@ def submit_basic():
 # nontrivial version: makes a prediction and shows a viz
 @app.route('/submit-advanced/', methods=['POST', 'GET'])
 def submit():
+    #return "not implemented"
     if request.method == 'GET':
         return render_template('submit.html')
     else:
